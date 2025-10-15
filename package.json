@@ -1,5 +1,5 @@
 {
-  "name": "Tempwallets.com",
+  "name": "tempwallets.com",
   "private": true,
   "scripts": {
     "build": "turbo run build",
