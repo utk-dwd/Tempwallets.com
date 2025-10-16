@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #000000;
+  color: #fff;
+  font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: clamp(1.5rem, 10vw, 12.5rem);
+  padding-right: clamp(1.5rem, 10vw, 12.5rem);
+}
+
+.section {
+  padding-left: 11.5rem;
+  padding-right: 11.5rem;
+}
+
+@media (max-width: 1520px) {
+  .section {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Wiggle animation for mobile */
+@keyframes wiggle {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(2px, -2px) rotate(0.5deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-0.5deg);
+  }
+  75% {
+    transform: translate(-2px, -1px) rotate(0.5deg);
+  }
+}
+
+.animate-wiggle {
+  animation: wiggle 4s ease-in-out infinite;
+}
