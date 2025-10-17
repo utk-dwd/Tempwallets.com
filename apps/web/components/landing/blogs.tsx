@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@repo/ui/components/ui/button";
 import { Badge } from "@repo/ui/components/ui/badge";
 import { useState, useEffect, useRef } from "react";
+import { AssetProtection } from "../AssetProtection";
 
 const cardData = [
   {
@@ -99,10 +100,11 @@ const Blogs = () => {
   };
 
   return (
-    <section className="min-h-screen bg-background text-foreground px-6 py-16 md:px-12 lg:px-24">
+    <AssetProtection>
+      <section className="min-h-screen bg-background text-foreground px-4 py-8 md:px-12 md:py-16 lg:px-24">
       <div className="max-w-7xl mx-auto">
         {/* Main Title */}
-        <h1 className="text-5xl md:text-6xl lg:text-6xl font-light mb-16 md:mb-24 max-w-3xl">
+        <h1 className="text-3xl md:text-6xl lg:text-6xl font-light mb-12 md:mb-16 lg:mb-24 max-w-3xl">
           The Ultimate Blockchain Ecosystem
         </h1>
 
@@ -110,20 +112,21 @@ const Blogs = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Left Side - Card with Vertical Label */}
           <div className="relative" ref={imageRef}>
-            <div className="bg-card rounded-3xl h-[600px] md:h-[600px] lg:h-[600px] relative overflow-hidden">
+            <div className="bg-card rounded-3xl h-[400px] md:h-[500px] lg:h-[600px] relative overflow-hidden">
                {/* Background Image */}
               <img
                 src={currentCard.image}
                 alt={currentCard.title}
-                className={`absolute inset-0 w-[600px] h-[600px] object-contain rounded-3xl transition-transform duration-300 ease-out ${
+                className={`absolute inset-0 w-full h-full md:w-[600px] md:h-[600px] object-contain rounded-3xl transition-transform duration-300 ease-out protected-image ${
                   isMobile ? 'animate-wiggle' : ''
                 }`}
                 style={{
                   transform: getTransform(),
                 }}
+                draggable="false"
               />
-              {/* Vertical Label */}
-              <div className="absolute -left-10 top-48 h-full flex items-center">
+              {/* Vertical Label - Hidden on mobile, visible on desktop */}
+              <div className="hidden lg:flex absolute -left-10 top-48 h-full items-center">
                 <div className="bg-transparent px-4 py-8">
                   <p className="text-foreground text-sm tracking-widest whitespace-nowrap transform -rotate-90 origin-center font-mono">
                     {currentCard.label}
@@ -161,7 +164,7 @@ const Blogs = () => {
                 {currentCard.title}
               </h2>
 
-              <p className="text-white/70 text-md py-[20px] leading-relaxed max-w-xl font-light">
+              <p className="text-white/70 text-sm py-[10px] leading-relaxed max-w-xl font-light">
                 {currentCard.description}
               </p>
 
@@ -171,12 +174,12 @@ const Blogs = () => {
             </div>
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-3 pt-8">
+            <div className="flex flex-wrap gap-2 md:gap-3 pt-2 md:pt-8">
               {currentCard.tags.map((tag) => (
                 <Badge 
                   key={tag}
                   variant="outline" 
-                  className="rounded-full px-6 py-2 border-border bg-transparent hover:bg-secondary transition-colors cursor-pointer text-sm font-light"
+                  className="rounded-full px-4 py-1.5 md:px-6 md:py-2 border-border bg-transparent hover:bg-secondary transition-colors cursor-pointer text-xs md:text-sm font-light"
                 >
                   {tag}
                 </Badge>
@@ -186,6 +189,7 @@ const Blogs = () => {
         </div>
       </div>
     </section>
+    </AssetProtection>
   );
 };
 

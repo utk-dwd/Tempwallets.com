@@ -4,6 +4,8 @@ import About from "../components/landing/about";
 import Blogs from "../components/landing/blogs";
 import Testimonials from "@/components/landing/testimonials";
 import Footer from "@/components/landing/footer";
+import Team from "@/components/landing/team";
+
 
 export default function Home() {
   return (
@@ -13,6 +15,7 @@ export default function Home() {
       <About />
       <Blogs />
       <Testimonials />
+      <Team />
       <Footer />
     </>
   );

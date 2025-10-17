@@ -11,7 +11,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ iconSrc, title, description }: ServiceCardProps) => {
   return (
-    <div className="group relative flex flex-col items-center p-8 rounded-2xl backdrop-blur-xl transition-all duration-300 overflow-hidden border border-white/20 border-b-transparent">
+    <div className="group relative flex flex-col items-center p-4 md:p-8 rounded-2xl backdrop-blur-xl transition-all duration-300 overflow-hidden border border-white/20 border-b-transparent">
       {/* Glassmorphism background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/[0.08] to-white/[0.02] rounded-2xl" />
       
@@ -23,21 +23,21 @@ const ServiceCard = ({ iconSrc, title, description }: ServiceCardProps) => {
       {/* Card content */}
       <div className="relative z-10">
         {/* Icon container with custom image */}
-        <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm mx-auto overflow-hidden">
+        <div className="mb-6 flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm mx-auto overflow-hidden">
           <img
             src={iconSrc}
             alt={title}
-            className="h-12 w-12 object-contain"
+            className="h-10 w-10 md:h-12 md:w-12 object-contain"
           />
         </div>
         
         {/* Service title */}
-        <h3 className="mb-4 text-xl font-semibold text-white text-center">
+        <h3 className="mb-4 text-lg md:text-xl font-semibold text-white text-center">
           {title}
         </h3>
         
         {/* Service description */}
-        <p className="mb-6 text-center text-sm text-slate-100/50 leading-relaxed">
+        <p className="mb-4 md:mb-6 text-center text-sm text-slate-100/50 leading-relaxed">
           {description}
         </p>
         
@@ -66,7 +66,7 @@ const Services = () => {
     {
       iconSrc: "/Wallet.png",
       title: "Burner Wallets",
-      description: "From concept to deployment, we create high-performance dapps tailored for finance and gaming.",
+      description: "Instantly create temporary gasless smart contract wallets for one-time or short-term use.",
     },
     {
       iconSrc: "/Write-Cheque.png",
@@ -76,13 +76,13 @@ const Services = () => {
   ];
 
   return (
-    <section className="bg-background py-20 px-4">
+    <section className="bg-background pt-2 md:pt-20 pb-20 px-4">
       <div className="mx-auto max-w-7xl pl-0 pr-0">
         {/* Grid layout for service cards - responsive across breakpoints */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 items-start">
           {services.map((service, index) => (
             // Middle card has negative margin top for staggered effect
-            <div key={index} className={index === 1 ? "-mt-20" : ""}>
+            <div key={index} className={index === 1 ? "md:-mt-20" : ""}>
               <ServiceCard
                 iconSrc={service.iconSrc}
                 title={service.title}

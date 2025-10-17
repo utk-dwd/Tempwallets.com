@@ -123,6 +123,9 @@ importers:
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@web3icons/react':
+        specifier: ^4.0.26
+        version: 4.0.26(react@19.1.0)(typescript@5.9.2)
       lucide-react:
         specifier: ^0.468.0
         version: 0.468.0(react@19.1.0)
@@ -135,6 +138,9 @@ importers:
       react-dom:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
+      react-icons:
+        specifier: ^5.5.0
+        version: 5.5.0(react@19.1.0)
       react-tweet:
         specifier: ^3.2.2
         version: 3.2.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -2219,6 +2225,16 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@web3icons/common@0.11.20':
+    resolution: {integrity: sha512-MTWgyHg6qzq9NfUcLnRvKqI5zNbEWUYjDTQmfDncJGXFruQrVGOyE+qDvj95Kq6+VJCfKyUBkQhQ9LUMmCK3pA==}
+    peerDependencies:
+      typescript: ^5.0.0
+
+  '@web3icons/react@4.0.26':
+    resolution: {integrity: sha512-Xu/PrV5IxRk/Emqn8JsooaU8Aeq56r74kO0pPMJBvVCDUs7OIcQyhKQONeD/RJfZbyUEbKyv6aHFefM+7/OGaw==}
+    peerDependencies:
+      react: ^18.2.0
+
   '@webassemblyjs/ast@1.14.1':
     resolution: {integrity: sha512-nuBEDgQfm1ccRp/8bCQrx1frohyufl4JlbMMZ4P1wpeOfDhF6FQkxZJ1b/e+PLwr6X1Nhw6OLme5usuBWYBvuQ==}
 
@@ -4292,6 +4308,11 @@ packages:
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
+
+  react-icons@5.5.0:
+    resolution: {integrity: sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==}
+    peerDependencies:
+      react: '*'
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -7169,6 +7190,17 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.11.1':
     optional: true
 
+  '@web3icons/common@0.11.20(typescript@5.9.2)':
+    dependencies:
+      typescript: 5.9.2
+
+  '@web3icons/react@4.0.26(react@19.1.0)(typescript@5.9.2)':
+    dependencies:
+      '@web3icons/common': 0.11.20(typescript@5.9.2)
+      react: 19.1.0
+    transitivePeerDependencies:
+      - typescript
+
   '@webassemblyjs/ast@1.14.1':
     dependencies:
       '@webassemblyjs/helper-numbers': 1.13.2
@@ -9587,6 +9619,10 @@ snapshots:
       scheduler: 0.26.0
 
   react-hook-form@7.65.0(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+
+  react-icons@5.5.0(react@19.1.0):
     dependencies:
       react: 19.1.0
 
