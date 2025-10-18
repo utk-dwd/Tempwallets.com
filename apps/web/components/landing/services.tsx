@@ -77,7 +77,7 @@ const Services = () => {
 
   return (
     <section className="bg-background pt-2 md:pt-20 pb-20 px-4">
-      <div className="mx-auto max-w-7xl pl-0 pr-0">
+      <div className="mx-auto mt-[2rem] max-w-7xl pl-0 pr-0">
         {/* Grid layout for service cards - responsive across breakpoints */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 items-start">
           {services.map((service, index) => (

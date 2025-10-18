@@ -248,7 +248,7 @@ const Footer = () => {
               <div className="col-span-2 lg:col-span-1">
                 <div className="mb-3 md:mb-4">
                   <img 
-                    src="/Logo White PNG.png" 
+                    src="/tempwallets-logo.png" 
                     alt="TempWallets" 
                     className="h-[40px] md:h-[50px] w-[160px] md:w-[200px] object-contain protected-image"
                     draggable="false"

@@ -64,10 +64,10 @@ export default function Hero() {
       <div
         className="absolute z-0 left-6 md:left-8 lg:left-[12vw]"
         style={{
-          top: 'clamp(420px, 35vh, 477px)'
+          top: 'clamp(420px, 35vh, 200px)'
         }}
       >
-        <h2 className="text-white font-['Poppins'] font-light text-[24px] md:text-[28px] lg:text-[30px] leading-tight text-left">
+        <h2 className="text-white font-['Poppins'] font-light text-[20px] md:text-[28px] lg:text-[30px] leading-tight text-left">
           Safe, Private<br />
           Disposable.
         </h2>
@@ -75,22 +75,23 @@ export default function Hero() {
 
       {/* Text Section - Responsive positioning */}
       <div 
-        className="absolute z-30 right-8 md:right-8 lg:right-0 px-4 md:px-0"
+        className="absolute z-30 md:right-8 lg:right-0 px-4 md:px-0"
         style={{
-          top: 'clamp(450px, 40vh, 450px)',
-          paddingRight: 'clamp(10rem, 5vw, 12.5rem)'
+          top: 'clamp(480px, 40vh, 450px)',
+          paddingRight: 'clamp(0rem, 5vw, 12.5rem)',
+          paddingLeft: 'clamp(10rem, 5vw, 12.5rem)'
         }}
       >
-        <p className="text-white/70 font-['Poppins'] text-xs md:text-base lg:text-[0.7vw] leading-relaxed text-left max-w-xs">
+        <p className="text-white/70 font-['Poppins'] text-[7px] md:text-base lg:text-[0.7vw] leading-relaxed text-right md:text-left max-w-xs">
           Use and throw burner wallets for crypto degens. Perfect for quick transactions and minimizing risk exposure in the volatile crypto space.
         </p>
       </div>
  
         {/* Get Started Button - Responsive */}
         <div
-          className="absolute z-30 right-[15vw] md:right-[8vw] lg:right-[15vw]"
+          className="absolute z-30 left-1/2 transform -translate-x-1/2 md:right-[8vw] md:left-auto md:transform-none lg:right-[15vw]"
           style={{
-            top: 'clamp(610px, 55vh, 580px)'
+            top: 'clamp(560px, 55vh, 580px)'
           }}
         >
           <Button
@@ -130,9 +131,9 @@ export default function Hero() {
 
         {/* Stats Section - Responsive */}
         <div 
-          className="absolute z-30 left-6 px-4 md:px-8"
+          className="absolute z-30 left-2 px-4 md:px-8"
           style={{
-            top: 'clamp(700px, 75vh, 790px)',
+            top: 'clamp(650px, 75vh, 790px)',
             paddingLeft: 'clamp(1rem, 5vw, 12.5rem)'
           }}
         >

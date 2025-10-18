@@ -113,7 +113,7 @@ const Navbar = () => {
                       <div className="grid grid-cols-[160px_1fr] gap-3">
                         {/* Left side - Single image */}
                         <div className="flex items-center justify-center">
-                          <div className="w-full max-w-[140px] aspect-square rounded-lg overflow-hidden bg-white/10">
+                          <div className="w-full max-w-[140px] aspect-square rounded-lg overflow-hidden">
                             <img
                               src={menu.image}
                               alt={menu.title}
@@ -162,7 +162,7 @@ const Navbar = () => {
           isMobileMenuOpen ? 'lg:opacity-100 opacity-0' : 'opacity-100'
         }`}>
           <img 
-            src="/Logo White PNG.png" 
+            src="/tempwallets-logo.png" 
             alt="TempWallets" 
             className="h-[40px] w-[160px] lg:h-[50px] lg:w-[200px] object-contain"
           />
@@ -201,7 +201,7 @@ const Navbar = () => {
             {/* Sidebar Header */}
             <div className="flex items-center justify-between pt-12 pb-6 px-6 border-b border-white/10">
               <img 
-                src="/Logo White PNG.png" 
+                src="/tempwallets-logo.png" 
                 alt="TempWallets" 
                 className="h-[40px] w-[160px] object-contain"
               />

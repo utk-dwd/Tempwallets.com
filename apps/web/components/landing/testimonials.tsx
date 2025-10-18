@@ -42,32 +42,32 @@ const Testimonials = ({
   };
 
   return (
-    <section className="bg-background py-16 px-4 md:px-8 lg:px-16">
+    <section className="bg-background py-12 md:py-16 px-4 sm:px-6 lg:px-16">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16">
-          {/* Left Side - Sticky */}
-          <div className="lg:col-span-4 lg:sticky lg:top-16 lg:self-start h-fit">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16">
+          {/* Left Side - Not sticky on mobile */}
+          <div className="lg:col-span-4 lg:sticky lg:top-16 lg:self-start h-fit order-1 lg:order-1">
             <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
                 Loved by the community
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base sm:text-lg text-muted-foreground">
                 See what people are saying about TempWallets
               </p>
               
               {/* Pagination Controls */}
               {totalPages > 1 && (
-                <div className="flex items-center gap-4 pt-8">
+                <div className="flex items-center gap-4 pt-6 lg:pt-8">
                   <Button
                     variant="outline"
                     size="icon"
                     onClick={goToPreviousPage}
                     disabled={currentPage === 0}
-                    className="h-10 w-10"
+                    className="h-10 w-10 shrink-0"
                   >
                     <ChevronLeft className="h-5 w-5" />
                   </Button>
-                  <span className="text-sm text-muted-foreground">
+                  <span className="text-sm text-muted-foreground whitespace-nowrap">
                     Page {currentPage + 1} of {totalPages}
                   </span>
                   <Button
@@ -75,7 +75,7 @@ const Testimonials = ({
                     size="icon"
                     onClick={goToNextPage}
                     disabled={currentPage === totalPages - 1}
-                    className="h-10 w-10"
+                    className="h-10 w-10 shrink-0"
                   >
                     <ChevronRight className="h-5 w-5" />
                   </Button>
@@ -84,13 +84,13 @@ const Testimonials = ({
             </div>
           </div>
 
-          {/* Right Side - Scrollable Masonry Layout */}
-          <div className="lg:col-span-8">
-            <div className="columns-1 md:columns-2 gap-4 md:gap-6">
+          {/* Right Side - Masonry Layout */}
+          <div className="lg:col-span-8 order-2 lg:order-2">
+            <div className="columns-1 sm:columns-2 lg:columns-1 xl:columns-2 gap-4 sm:gap-6">
               {currentTweets.map((tweetId) => (
                 <div 
                   key={tweetId} 
-                  className="tweet-container break-inside-avoid mb-4 md:mb-6"
+                  className="tweet-container break-inside-avoid mb-4 sm:mb-6"
                 >
                   <Tweet id={tweetId} />
                 </div>
@@ -99,7 +99,7 @@ const Testimonials = ({
 
             {/* Empty State */}
             {currentTweets.length === 0 && (
-              <div className="flex items-center justify-center min-h-[400px] border-2 border-dashed border-border rounded-xl">
+              <div className="flex items-center justify-center min-h-[300px] sm:min-h-[400px] border-2 border-dashed border-border rounded-xl">
                 <p className="text-muted-foreground">No tweets to display</p>
               </div>
             )}
