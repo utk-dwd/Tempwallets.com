@@ -104,17 +104,17 @@ const about = () => {
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2 lg:pl-10">
                     <div className="w-2 h-2 rounded-full bg-foreground"></div>
-                    <span className="text-xs md:text-sm text-muted-foreground font-light">Smart Contracts</span>
+                    <span className="text-xs md:text-sm text-muted-foreground font-light">Wallet Recovery</span>
                   </div>
-                  <p className="text-3xl md:text-4xl lg:text-5xl font-light lg:pl-20">•  2M+</p>
+                  <p className="text-3xl md:text-4xl lg:text-5xl font-light lg:pl-20">•  99%</p>
                 </div>
 
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2 lg:pl-10">
                     <div className="w-2 h-2 rounded-full bg-foreground"></div>
-                    <span className="text-xs md:text-sm text-muted-foreground font-light">Neutral Operations</span>
+                    <span className="text-xs md:text-sm text-muted-foreground font-light">Proactive Checks</span>
                   </div>
-                  <p className="text-3xl md:text-4xl lg:text-5xl font-light lg:pl-20">•  99%</p>
+                  <p className="text-3xl md:text-4xl lg:text-5xl font-light lg:pl-20">•  14</p>
                 </div>
               </div>
             </div>
