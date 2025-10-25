@@ -60,18 +60,18 @@ const Services = () => {
   const services = [
     {
       iconSrc: "/Risk.png",
-      title: "Risk Free",
-      description: "Seamless, secure crypto wallet solutions for storing, sending, and managing digital assets.",
+      title: "Lightning Network Channels",
+      description: "Open instant low-fee Lightning channels in TempWallet for fast, scalable, cross-chain crypto payments.",
     },
     {
       iconSrc: "/Wallet.png",
-      title: "Burner Wallets",
-      description: "Instantly create temporary gasless smart contract wallets for one-time or short-term use.",
+      title: "Gas-less Burner Wallets",
+      description: "Receive tokens instantly without gas fees in burner wallets for secure, private transactions.",
     },
     {
       iconSrc: "/Write-Cheque.png",
-      title: "Network Support",
-      description: "Launch your own next-gen marketplace for NFTs with end-to-end support, from minting to trading.",
+      title: "Secure Telegram Notifications",
+      description: "Get private, real-time Telegram alerts for all wallet activities to stay informed and protected.",
     },
   ];
 

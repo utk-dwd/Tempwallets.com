@@ -77,13 +77,13 @@ export default function Hero() {
       <div 
         className="absolute z-30 md:right-8 lg:right-0 px-4 md:px-0"
         style={{
-          top: 'clamp(480px, 40vh, 450px)',
+          top: 'clamp(500px, 40vh, 450px)',
           paddingRight: 'clamp(0rem, 5vw, 12.5rem)',
           paddingLeft: 'clamp(10rem, 5vw, 12.5rem)'
         }}
       >
         <p className="text-white/70 font-['Poppins'] text-[7px] md:text-base lg:text-[0.7vw] leading-relaxed text-right md:text-left max-w-xs">
-          Use and throw burner wallets for crypto degens. Perfect for quick transactions and minimizing risk exposure in the volatile crypto space.
+          USE - AND - THROW BURNER WALLETS FOR CRYPTO DEGENS.
         </p>
       </div>
  
@@ -91,7 +91,7 @@ export default function Hero() {
         <div
           className="absolute z-30 left-1/2 transform -translate-x-1/2 md:right-[8vw] md:left-auto md:transform-none lg:right-[15vw]"
           style={{
-            top: 'clamp(560px, 55vh, 580px)'
+            top: 'clamp(580px, 55vh, 600px)'
           }}
         >
           <Button
@@ -101,33 +101,6 @@ export default function Hero() {
             Get started
           </Button>
         </div>
-
-        {/* Temp Wallets Creation Button - Hidden on mobile */}
-        {!isMobile && (
-          <div
-            className="absolute z-30 left-[2vw] md:left-[6vw] lg:left-[70vw]"
-            style={{
-              top: 'clamp(750px, 70vh, 780px)'
-            }}
-          >
-            <Button
-              variant="glass"
-              className="font-['Poppins'] w-48 md:w-56 lg:w-64 h-auto flex items-center justify-between p-3 md:p-4"
-            >
-              {/* Left grid - Text */}
-              <div className="flex-1 text-left px-1 md:px-2">
-                <span className="text-white text-base md:text-lg lg:text-xl font-light">
-                  TempWallets <br/> Creation
-                </span>
-              </div>
-
-              {/* Right grid - Arrow icon at bottom */}
-              <div className="flex items-end">
-                <ArrowRight className="h-8 w-8 md:h-9 md:w-9 lg:h-10 lg:w-10 text-white group-hover:translate-x-1 transition-transform duration-300" />
-              </div>
-            </Button>
-          </div>
-        )}
 
         {/* Stats Section - Responsive */}
         <div 

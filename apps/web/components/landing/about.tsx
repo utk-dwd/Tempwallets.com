@@ -12,14 +12,14 @@ const about = () => {
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 pb-12 md:pb-16 lg:pb-[10rem]">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight text-balance">
-              Where Technology
+              DApp Connections
               <br />
-              Meets Trust
+              Are Risky
             </h1>
           </div>
           <div className="flex items-end pl-20 lg:pl-40">
             <p className="text-white/80 text-xs md:text-sm leading-relaxed max-w-md">
-              TempWallets: Privacy-First, Disposable Smart Wallets for Crypto Transactions.
+              <b>TempWallets: </b>  Privacy-First, Disposable Smart Wallets for Crypto Transactions.
             </p>
           </div>
         </div>
@@ -33,7 +33,7 @@ const about = () => {
             <div className="flex gap-4">
               <span className="text-muted-foreground font-mono text-sm">01</span>
               <p className="text-muted-foreground leading-relaxed text-xs md:text-sm text-white/70">
-                Every transaction, every contract, and every interaction on our network is verified and transparent.
+                Connecting to unverified DApps exposes your crypto assets to theft and loss, always verify before linking.
               </p>
             </div>
 
@@ -54,7 +54,7 @@ const about = () => {
 
               {/* Card content */}
               <div className="relative z-10 w-full">
-                <h3 className="text-white text-base md:text-lg mb-4 md:mb-6 font-medium">Wallet Breach Stats</h3>
+                <h3 className="text-white text-base md:text-lg mb-4 md:mb-6 font-medium">Total wallets breached</h3>
                 <div className="space-y-6">
                   <div className="space-y-2">
                     <div className="flex justify-between items-center mb-2">

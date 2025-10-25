@@ -105,7 +105,9 @@ const Blogs = () => {
       <div className="max-w-7xl mx-auto">
         {/* Main Title */}
         <h1 className="text-3xl md:text-6xl lg:text-6xl font-light mb-12 md:mb-16 lg:mb-24 max-w-3xl">
-          The Ultimate Blockchain Ecosystem
+          Explore the
+          <br />
+          FAQs
         </h1>
 
         {/* Content Grid */}
